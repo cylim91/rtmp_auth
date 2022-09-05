@@ -8,10 +8,11 @@ from rest_framework                     import generics
 class StreamAuth(generics.GenericAPIView):
 
     def get(self, request, *args, **kwargs):
-        return HttpResponse('Hello')
+        print("huhuh")
+        return HttpResponse('This is somthing else')
 
     def post(self, request, *args, **kwargs):
         print('1:',request.data)
         print('2:', args)
         print('3:', kwargs)
-        return HttpResponse('What?')
+        return HttpResponse('This is stream')
